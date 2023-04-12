@@ -1,33 +1,22 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import QrCode from "./assets/images/image-qr-code.png"
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="flex h-full w-full justify-center items-center bg-[#d6e2f0] font-[outfit]">
+
+      <div className='flex flex-col justify-center items-center w-[262px] bg-white p-3 rounded-2xl'>
+        <img src={QrCode} alt="qrcode" className='rounded-2xl ' />
+        <div className='text-center mt-6'>
+          <h1 className='text-lg mb-4'> <strong>Improve your front-end skills by building projects</strong></h1>
+          <p className='text-sm mb-4'>Scan the QR code to visit Frontend Mentor and take your coding to the next level</p>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
     </div>
   )
 }
